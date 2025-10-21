@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:13
+    env_file:
+      - ./envsample
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB -h localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./envsample
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./api:/app/api:delegated
+    ports:
+      - "8000:8000"
+    command: ["python", "api/main.py"]
+
+  load_fixtures:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./envsample
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./api:/app/api:delegated
+    command: ["python", "api/load_fixtures.py"]
+
+volumes:
+  postgres_data: {}

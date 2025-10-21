@@ -1,6 +1,9 @@
 from sqlalchemy import Column, Float, Integer, String, ForeignKey
 from utils.db import Base
 from sqlalchemy.orm import relationship
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 class Activity(Base):
@@ -13,6 +16,7 @@ class Activity(Base):
     parent_id = Column(Integer, ForeignKey("activities.id"), nullable=True)
     parent = relationship("Activity", remote_side=[id], back_populates="children")
     children = relationship("Activity", back_populates="parent")
+
     organizations = relationship(
         "Organization", secondary="organization_activities", back_populates="activities"
     )

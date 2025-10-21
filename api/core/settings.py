@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     POSTGRES_CONN_TIMEOUT: int = 60
     POSTGRES_MIN_CONN_SIZE: int = 1
     POSTGRES_MAX_CONN_SIZE: int = 10
+    LOG_LEVEL: str = config.get("app", {}).get("log_level", "INFO")
 
 
 @lru_cache

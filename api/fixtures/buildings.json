@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "address": "Красная площадь, 1",
+        "latitude": 55.7558,
+        "longitude": 37.6173
+    },
+    {
+        "id": 2,
+        "address": "Театральная площадь, 1",
+        "latitude": 55.7601,
+        "longitude": 37.6187
+    },
+    {
+        "id": 3,
+        "address": "Манежная площадь, 1",
+        "latitude": 55.7560,
+        "longitude": 37.6150
+    },
+    {
+        "id": 4,
+        "address": "Красная площадь, 3",
+        "latitude": 55.7547,
+        "longitude": 37.6215
+    },
+    {
+        "id": 5,
+        "address": "Ленинские горы, 1",
+        "latitude": 55.7020,
+        "longitude": 37.5300
+    },
+    {
+        "id": 6,
+        "address": "ул. Волхонка, 15",
+        "latitude": 55.7447,
+        "longitude": 37.6055
+    },
+    {
+        "id": 7,
+        "address": "ул. Тверская, 7",
+        "latitude": 55.7570,
+        "longitude": 37.6100
+    },
+    {
+        "id": 8,
+        "address": "ул. Арбат, 20",
+        "latitude": 55.7500,
+        "longitude": 37.6000
+    },
+    {
+        "id": 9,
+        "address": "ул. Новый Арбат, 11",
+        "latitude": 55.7510,
+        "longitude": 37.5950
+    },
+    {
+        "id": 10,
+        "address": "Ленинградское шоссе, 16",
+        "latitude": 55.7600,
+        "longitude": 37.6200
+    },
+    {
+        "id": 11,
+        "address": "ул. Самокатная, 4",
+        "latitude": 55.7400,
+        "longitude": 37.6700
+    },
+    {
+        "id": 12,
+        "address": "ул. Подмосковная, 10",
+        "latitude": 55.8500,
+        "longitude": 37.5000
+    },
+    {
+        "id": 13,
+        "address": "пр. Мира, 211",
+        "latitude": 55.8500,
+        "longitude": 37.6500
+    },
+    {
+        "id": 14,
+        "address": "Щелковское шоссе, 100",
+        "latitude": 55.8100,
+        "longitude": 37.8000
+    },
+    {
+        "id": 15,
+        "address": "Рублевское шоссе, 62",
+        "latitude": 55.7500,
+        "longitude": 37.4000
+    },
+    {
+        "id": 16,
+        "address": "ул. Лужники, 24",
+        "latitude": 55.7100,
+        "longitude": 37.5500
+    },
+    {
+        "id": 17,
+        "address": "ул. Вавилова, 69",
+        "latitude": 55.6800,
+        "longitude": 37.5800
+    },
+    {
+        "id": 18,
+        "address": "Каширское шоссе, 61",
+        "latitude": 55.6200,
+        "longitude": 37.7100
+    },
+    {
+        "id": 19,
+        "address": "Ярославское шоссе, 144",
+        "latitude": 55.8700,
+        "longitude": 37.7000
+    },
+    {
+        "id": 20,
+        "address": "ул. Зеленоградская, 25",
+        "latitude": 55.9800,
+        "longitude": 37.1800
+    }
+]

@@ -1,6 +1,9 @@
 from sqlalchemy import Column, Integer, String, ARRAY, Float
 from utils.db import Base
 from sqlalchemy.orm import relationship
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 class Building(Base):

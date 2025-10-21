@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 def load_conf() -> dict:
     load_dotenv(dotenv_path="./envsample")
-    with open("./config/config.yml") as f:
+    with open(os.getenv("CONFIG_PATH")) as f:
         data = safe_load(os.path.expandvars(f.read()))
     return dict(data)
 
