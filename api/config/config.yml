@@ -1,0 +1,10 @@
+app:
+    port:  ${APP_PORT}
+    host: ${APP_HOST}
+    static_api_key: ${STATIC_API_KEY}
+database:
+    host:  ${POSTGRES_HOST}
+    port:  ${POSTGRES_PORT}
+    db_name: ${POSTGRES_DB}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
