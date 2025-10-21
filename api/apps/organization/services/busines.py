@@ -177,7 +177,10 @@ class OrganizationBusinessService:
         """
         logger.info("Searching organizations by name: %s", name)
         query = select(Organization).options(
-            selectinload(Organization.building), selectinload(Organization.activities)
+            selectinload(Organization.building),
+            selectinload(Organization.activities)
+            .selectinload(Activity.parent)
+            .selectinload(Activity.children),
         )
         if name.isdigit():
             query = query.filter(
@@ -215,7 +218,10 @@ class OrganizationBusinessService:
             "Searching organizations by geo coords: (%s, %s)", latitude, longitude
         )
         query = select(Organization).options(
-            selectinload(Organization.building), selectinload(Organization.activities)
+            selectinload(Organization.building),
+            selectinload(Organization.activities)
+            .selectinload(Activity.parent)
+            .selectinload(Activity.children),
         )
 
         def is_within_radius(org):
