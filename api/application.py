@@ -47,6 +47,6 @@ def create_app():
         logger.info("Initializing database...")
         await init_db()
         logger.info("Applying migrations...")
-        # await run_migrations_in_thread()
+        await run_migrations_in_thread()
 
     return app
